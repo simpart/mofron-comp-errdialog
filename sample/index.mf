@@ -1,0 +1,5 @@
+<setting>
+    <tag load="mofron-comp-errdialog">ErrDialog</tag>
+</setting>
+
+<ErrDialog>Error Dialog</ErrDialog>
