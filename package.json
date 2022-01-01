@@ -1,6 +1,6 @@
 {
   "name": "mofron-comp-errdialog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "dependencies": {
     "mofron-comp-dialog": "",
     "mofron-comp-text": "",
-    "mofron-effect-hrzpos": ""
+    "mofron-effect-hrzpos": "",
+    "mofron-layout-hrzcenter" : ""
   },
   "keywords": [
     "mofron",

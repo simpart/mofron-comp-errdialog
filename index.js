@@ -3,9 +3,10 @@
  * @brief jspreadsheet component for mofron
  * @license MIT
  */
-const Dialog = require('mofron-comp-dialog'); 
-const Text   = require('mofron-comp-text');
-const HrzPos = require('mofron-effect-hrzpos');
+const Dialog  = require('mofron-comp-dialog'); 
+const Text    = require('mofron-comp-text');
+const HrzPos  = require('mofron-effect-hrzpos');
+const HrzCent = require('mofron-layout-hrzcenter');
 
 module.exports = class extends Dialog {
     /**
@@ -48,13 +49,17 @@ module.exports = class extends Dialog {
 		    this
 		)
 	    });
-            
-	    this.text().config({
-	        style: { "margin-top" : "0.4rem" },
+
+            this.layout(new HrzCent(90));
+
+            this.text().config({
+                style: { "margin-top" : "0.4rem" },
                 size:  "0.2rem",
-		effect: new HrzPos("center")
+                effect: new HrzPos("center")
             });
-	    this.child(this.text());
+	    let conts = new mofron.class.Component(this.text());
+            this.child(conts);
+	    this.childDom(conts.rootDom()[0]);
         } catch (e) {
             console.error(e.stack);
             throw e;
